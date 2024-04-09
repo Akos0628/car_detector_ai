@@ -10,7 +10,10 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
-    configureSerialization()
+    Config.threshold = environment.config.property("application.threshold").getString().toFloat()
+    Config.detectionLimit = environment.config.property("application.detectionLimit").getString().toInt()
+    Config.defaultClass = environment.config.property("application.defaultClass").getString()
+
     configureRouting()
 
     routing {

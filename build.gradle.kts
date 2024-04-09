@@ -1,5 +1,6 @@
 val ktor_version: String by project
 val kotlin_version: String by project
+val kotlin_dl_version: String by project
 val logback_version: String by project
 
 plugins {
@@ -28,6 +29,11 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json-jvm")
     implementation("io.ktor:ktor-server-netty-jvm")
     implementation("ch.qos.logback:logback-classic:$logback_version")
+
+    implementation ("org.jetbrains.kotlinx:kotlin-deeplearning-tensorflow:$kotlin_dl_version")
+    implementation ("org.jetbrains.kotlinx:kotlin-deeplearning-onnx:$kotlin_dl_version")
+    implementation ("org.jetbrains.kotlinx:kotlin-deeplearning-visualization:$kotlin_dl_version")
+
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
