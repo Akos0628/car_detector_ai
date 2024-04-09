@@ -1,4 +1,4 @@
-package com.example.utils
+package hu.bme.vik.utils
 
 import java.awt.image.BufferedImage
 import java.io.ByteArrayInputStream

@@ -1,8 +1,8 @@
 package hu.bme.vik.plugins
 
-import com.example.utils.createImageFromBytes
 import hu.bme.vik.Config
 import hu.bme.vik.model.Detected
+import hu.bme.vik.utils.createImageFromBytes
 import io.ktor.http.*
 import io.ktor.http.content.*
 import io.ktor.serialization.kotlinx.json.*
