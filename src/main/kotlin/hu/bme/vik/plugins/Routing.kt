@@ -2,6 +2,7 @@ package hu.bme.vik.plugins
 
 import hu.bme.vik.Config
 import hu.bme.vik.model.Detected
+import hu.bme.vik.model.Detections
 import hu.bme.vik.utils.createImageFromBytes
 import io.ktor.http.*
 import io.ktor.http.content.*
@@ -79,7 +80,7 @@ fun Application.configureRouting() {
                 )
             }
 
-            call.respond(result)
+            call.respond(Detections(result))
         }
     }
 }
