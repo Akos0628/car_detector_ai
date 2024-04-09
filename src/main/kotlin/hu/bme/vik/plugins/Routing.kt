@@ -37,7 +37,7 @@ fun Application.configureRouting() {
                     }
                     is PartData.FormItem -> {
                         when (part.name) {
-                            "treshold" -> if (part.value.isNotBlank()) threshold = part.value.toFloat()
+                            "threshold" -> if (part.value.isNotBlank()) threshold = part.value.toFloat()
                             "detectionLimit" -> if (part.value.isNotBlank()) detectionLimit = part.value.toInt()
                             "classLabelNames" -> if (part.value.isNotBlank())  {
                                 classLabels.clear()
